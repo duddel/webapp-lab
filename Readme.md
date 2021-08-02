@@ -24,3 +24,10 @@ Run `Swagger Codegen` on our API to generate the `Flask` backend and HTML docume
 
     java -jar ./swagger-codegen-cli.jar generate -i ./sampleapi.yaml -l python-flask -o ./backend
     java -jar ./swagger-codegen-cli.jar generate -i ./sampleapi.yaml -l html2 -o ./frontend/api
+
+### Frontend with Vue.js (2.x) and Axios
+
+We use `Vue.js v2.x` for a simple frontend, and `Axios` for making HTTP requests to our API at `localhost:8080`, see: ([frontend/index.html](frontend/index.html)). The basics are explained here:
+
+-   <https://vuejs.org/v2/guide/>
+-   <https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html>
