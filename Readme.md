@@ -1,5 +1,7 @@
 # WebApp Lab
 
+> **NOTE:** This project is for educational purposes only, not for building a secure web application. NOT FOR PRODUCTIVE USE!
+
 In this experiment, we
 
 -   define a REST API (`OpenAPI`),
@@ -31,3 +33,12 @@ We use `Vue.js v2.x` for a simple frontend, and `Axios` for making HTTP requests
 
 -   <https://vuejs.org/v2/guide/>
 -   <https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html>
+
+### Enable CORS in the backend
+
+Enable CORS (Cross-Origin Resource Sharing) to access the backend via HTTP. This is even required if frontend and backend are served from the same host, but via different ports.
+
+Install `flask_cors` and enable CORS in `__main__.py`, see:
+
+-   [backend/requirements.txt](backend/requirements.txt)
+-   [backend/swagger_server/\_\_main\_\_.py](backend/swagger_server/__main__.py)
