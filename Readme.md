@@ -29,7 +29,7 @@ Run `Swagger Codegen` on our API to generate the `Flask` backend and HTML docume
 
 ### Frontend with Vue.js (2.x) and Axios
 
-We use `Vue.js v2.x` for a simple frontend, and `Axios` for making HTTP requests to our API at `localhost:8080`, see: ([frontend/index.html](frontend/index.html)). The basics are explained here:
+We use `Vue.js v2.x` for a simple frontend. We use `Axios` for making HTTP requests to our API server running on the same host as the frontend server (different port), see: ([frontend/index.html](frontend/index.html)). The basics are explained here:
 
 -   <https://vuejs.org/v2/guide/>
 -   <https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html>
@@ -38,7 +38,7 @@ We use `Vue.js v2.x` for a simple frontend, and `Axios` for making HTTP requests
 
 Enable CORS (Cross-Origin Resource Sharing) to access the backend via HTTP. This is even required if frontend and backend are served from the same host, but via different ports.
 
-Install `flask_cors` and enable CORS in `__main__.py`, see 66ace76:
+Install `flask_cors` and enable CORS in `__main__.py`, see (66ace76)
 
 -   [backend/requirements.txt](backend/requirements.txt)
 -   [backend/swagger_server/\_\_main\_\_.py](backend/swagger_server/__main__.py)

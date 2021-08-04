@@ -5,11 +5,24 @@
     <title>Vue 2 + Axios Example</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        // assuming the API server runs on the same host as the
+        // frontend comes from: derive the API url from host.
+        // assume this port for the API server:
+        var apiPort = 8080
+
+        var apiUrl = document.location.protocol + '//'
+            + document.location.hostname + ':' + apiPort
+
+        // set baseURL in axios global default config
+        axios.defaults.baseURL = apiUrl
+    </script>
 </head>
 
 <body>
     <div id="appGetUsers">
-        API response /users (get): {{ info }}
+        API response (get) {{ url }}/users &#8594; {{ info }}
     </div>
 
     <script>
@@ -17,12 +30,13 @@
             el: '#appGetUsers',
             data() {
                 return {
-                    info: null
+                    info: null,
+                    url: apiUrl
                 }
             },
             mounted() {
                 axios
-                    .get('http://localhost:8080/users')
+                    .get('/users')
                     .then(response => (this.info = response.data))
             }
         })
