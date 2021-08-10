@@ -8,9 +8,20 @@ In this experiment, we
 -   generate backend code (`Python`, `Flask`) with `Swagger Codegen`,
 -   generate API documentation (HTML) with `Swagger Codegen`,
 -   write frontend code (`Vue.js`) to access the API and
--   deploy the entire thing with `Docker`.
+-   deploy the entire thing with `Docker`, using `Apache` to serve the frontend.
 
-## Kick-start
+## Run the web app with Docker
+
+The example web application can be run from this repository with Docker, like so:
+
+    git clone https://github.com/duddel/webapp-lab.git
+    cd webapp-lab
+    docker build -t webapp-lab .
+    docker run -p 80:80 -p 8080:8080 webapp-lab
+
+* * *
+
+The example web application in this repository has been created by following these steps:
 
 ### Define a REST API (OpenAPI 3.0)
 
