@@ -5,8 +5,9 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # copy backend and the start script
-COPY ./backend /usr/src/app/backend
-COPY ./run_servers.sh /usr/src/app
+COPY ./backend backend/
+COPY ./run_servers.sh ./
+RUN chmod +x ./run_servers.sh
 
 # install requirements and packages
 RUN pip3 install --no-cache-dir -r backend/requirements.txt
