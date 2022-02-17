@@ -12,11 +12,9 @@ In this experiment, we
 
 ## Run the web app with Docker
 
-The example web application can be run from this repository with Docker, like so:
+Build and run from this repository with Docker, like so:
 
-    git clone https://github.com/duddel/webapp-lab.git
-    cd webapp-lab
-    docker build -t webapp-lab .
+    docker build -t webapp-lab https://github.com/duddel/webapp-lab.git#main
     docker run -p 80:80 -p 8080:8080 webapp-lab
 
 * * *
